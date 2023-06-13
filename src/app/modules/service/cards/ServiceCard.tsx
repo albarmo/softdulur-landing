@@ -10,7 +10,6 @@ const ServiceCard = (props: { data: Service }) => {
                 alt="Vercel Logo"
                 width={240}
                 height={24}
-                priority
             />
             <h3>{props.data.title}</h3>
         </div>

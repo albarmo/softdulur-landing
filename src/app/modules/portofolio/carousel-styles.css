@@ -1,9 +1,17 @@
 
-.swiper {
+  .swiper {
     width: 280px;
     height: 340px;
   }
-  
+
+
+  @media only screen and (max-width: 600px) {
+    .swiper {
+      width: 290px;
+      height: 440px;
+    }
+  }
+
   .swiper-slide {
     display: flex;
     align-items: center;
@@ -54,3 +62,4 @@
   .swiper-slide:nth-child(10n) {
     background-color: rgb(54, 94, 77);
   }
+

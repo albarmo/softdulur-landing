@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 const PackageCard = (props: { data: Package }) => {
     const router = useRouter()
     return (
-        <div onClick={() => router.push('/package/1')} className='p-6 group w-96 h-96 rounded-sm bg-[#f5fbfb] cursor-pointer flex flex-col  items-center hover:items-start justify-center hover:justify-between hover:bg-blue-400'>
+        <div onClick={() => router.push('/package/1')} className='p-6 group rounded-sm bg-[#f5fbfb] cursor-pointer flex flex-col  items-center hover:items-start justify-center hover:justify-between hover:bg-blue-400'>
             <section>
                 <Image
                     className='hidden group-hover:block'

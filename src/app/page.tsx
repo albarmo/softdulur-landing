@@ -8,11 +8,11 @@ import ServicesList from './modules/service/ServicesList'
 export default function Home() {
   return (
     <React.Fragment>
-      <main className="min-h-screen gradient-background">
+      <main className="min-h-screen gradient-background overflow-hidden">
         <HeroDashboard />
         <ServicesList />
         <PortofolioCarousel />
-        <div className='px-20 py-20 gradient-1 min-h-screen'>
+        <div className='p-5 lg:px-20 lg:py-20 gradient-1 min-h-screen'>
           <ConsultationCTA />
           <PackageList />
         </div>
