@@ -1,6 +1,6 @@
 import { Package, packages } from '@/utils/data/package'
 import React from 'react'
-import PackageCard from './cards/ServiceCard'
+import PackageCard from './cards/PackageCard'
 
 const PackageList = () => {
     return (
