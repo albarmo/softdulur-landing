@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Service } from '@/utils/data/service'
 
 const ServiceCard = (props: { data: Service }) => {
-    console.log(props)
     return (
         <div className='p-10 rounded-sm bg-[#f5fbfb] cursor-pointer flex flex-col items-center justify-center'>
             <Image

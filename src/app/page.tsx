@@ -1,11 +1,9 @@
 import React from 'react'
 import HeroDashboard from '@/components/hero/hero'
-import NavigationBar from '@/components/navigation/navbar'
-import ConsultationCTA from '../modules/contacts/ConsultationCTA'
-import PackageList from '../modules/package/PackageList'
-import PortofolioCarousel from '../modules/portofolio/PortofolioCarousel'
-import ServicesList from '../modules/service/ServicesList'
-import Footer from '@/components/footer/footer'
+import ConsultationCTA from './modules/contacts/ConsultationCTA'
+import PackageList from './modules/package/PackageList'
+import PortofolioCarousel from './modules/portofolio/PortofolioCarousel'
+import ServicesList from './modules/service/ServicesList'
 
 export default function Home() {
   return (
