@@ -46,7 +46,7 @@ const NavigationBar = () => {
           <option>Indonesia</option>
           <option>English</option>
         </select>
-        <button>Hire Us</button>
+        <button onClick={() => router.push('/')} className='border border-black px-5 py-2 rounded-full text-sm font-bold'>Hire Us</button>
       </section>
     </nav>
   )

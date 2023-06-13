@@ -17,8 +17,8 @@ const PackageDetail = () => {
                         <h5 className='text-xl font-bold'>Engagement Model</h5>
                         <p className='mt-3'>Website landing page adalah website yang hanya terdiri dari sedikit halaman (biasanya kurang dari 5), semua informasi biasanya tertera di halaman utama. Tujuannya sebagai perkenalan atau promosi satu produk tertentu.</p>
                         <ul className='mt-10 list-disc px-10'>
-                            {Array.from(Array(7).keys()).map((item) =>
-                                <li className=" text-sm font-medium mr-2 px-3.5 py-1.5 rounded">Responsibility {item}</li>
+                            {Array.from(Array(7).keys()).map((item, index: number) =>
+                                <li key={index} className=" text-sm font-medium mr-2 px-3.5 py-1.5 rounded">Responsibility {item}</li>
 
                             )}
                         </ul>

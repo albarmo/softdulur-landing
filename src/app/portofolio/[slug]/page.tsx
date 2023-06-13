@@ -70,8 +70,8 @@ const PortofolioDetail = () => {
                         <section className='col-span-3'>
                             <h5 className='text-xl font-bold'>Tehnical  Responsibility </h5>
                             <div className='grid grid-cols-5 gap-4 mt-10'>
-                                {Array.from(Array(7).keys()).map((item) =>
-                                    <span className="bg-gray-100 text-gray-800 text-sm font-medium mr-2 px-3.5 py-1.5 rounded">Responsibility {item}</span>
+                                {Array.from(Array(7).keys()).map((item, index) =>
+                                    <span key={index} className="bg-gray-100 text-gray-800 text-sm font-medium mr-2 px-3.5 py-1.5 rounded">Responsibility {item}</span>
 
                                 )}
                             </div>
@@ -79,8 +79,9 @@ const PortofolioDetail = () => {
                         <section className='col-span-3'>
                             <h5 className='text-xl font-bold'>Technology Stack</h5>
                             <div className='grid grid-cols-8 gap-2 mt-10'>
-                                {Array.from(Array(7).keys()).map((item) =>
+                                {Array.from(Array(7).keys()).map((item, index) =>
                                     <img
+                                        key={index}
                                         src={"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"}
                                         alt={`Project Stack ${item + 1}`}
                                         width={40}
@@ -93,8 +94,9 @@ const PortofolioDetail = () => {
                         <section className='col-span-3'>
                             <h5 className='text-xl font-bold'>Project Gallery</h5>
                             <div className='grid grid-cols-4 gap-10 mt-10'>
-                                {Array.from(Array(7).keys()).map((item) =>
+                                {Array.from(Array(7).keys()).map((item, index) =>
                                     <Image
+                                        key={index}
                                         src={`../mobile.svg`}
                                         alt={`Project Screenshoot ${item + 1}`}
                                         width={120}

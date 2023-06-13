@@ -2,6 +2,8 @@ import NavigationBar from '@/components/navigation/navbar'
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import Footer from '@/components/footer/footer'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800'],
