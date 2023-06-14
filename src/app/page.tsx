@@ -6,6 +6,7 @@ import PortofolioCarousel from './modules/portofolio/PortofolioCarousel'
 import ServicesList from './modules/service/ServicesList'
 
 export default function Home() {
+
   return (
     <React.Fragment>
       <main className="min-h-screen gradient-background overflow-hidden">

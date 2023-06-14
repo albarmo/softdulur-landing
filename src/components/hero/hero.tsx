@@ -22,26 +22,24 @@ const HeroDashboard = () => {
                     exit={{ opacity: 0, transition: { duration: 1 } }}
                     variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
                 >
+                    <motion.h1 variants={itemVariants}>
+                        <TypeAnimation
+                            preRenderFirstString={true}
+                            sequence={[
+                                500,
+                                'We Develop Tech for You', // initially rendered starting point
+                                1000,
+                                'We Develop Tech for Them',
+                                1000,
+                                'We Develop Tech for Everyone .',
+                                500,
+                            ]}
+                            speed={50}
+                            style={{ fontSize: '2rem', fontWeight: 'bold' }}
+                            repeat={0}
+                        />
+                    </motion.h1>
                     <ul>
-                        <motion.h1 variants={itemVariants}>
-                            <div className='flex lg:hidden'>
-                                <TypeAnimation
-                                    preRenderFirstString={true}
-                                    sequence={[
-                                        500,
-                                        'We Develop Tech for You', // initially rendered starting point
-                                        1000,
-                                        'We Develop Tech for Them',
-                                        1000,
-                                        'We Develop Tech for Everyone .',
-                                        500,
-                                    ]}
-                                    speed={50}
-                                    style={{ fontSize: '2rem', fontWeight: 'bold' }}
-                                    repeat={0}
-                                />
-                            </div>
-                        </motion.h1>
                         <motion.li variants={itemVariants}>
                             <p className='mt-4 text-md'>Software house services are needed to help your business connected with your target audience. Worry not, we will make the process as easy and quick as possible. So, what are you waiting for?</p>
                         </motion.li>
