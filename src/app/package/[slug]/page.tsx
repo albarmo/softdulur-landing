@@ -5,14 +5,14 @@ const PackageDetail = () => {
         <React.Fragment>
             {/* Package Header */}
             <div className="flex h-auto justify-between gradient-background bg-blue-600">
-                <div className="px-40 py-20 pt-40 leading-1">
+                <div className="p-10  pt-40 md:px-40 py-20 md:pt-40 leading-1">
                     <h1 className='text-4xl font-[600] text-black'>Landing Pack .</h1>
                     <h4 className='text-2xl font-[600] text-blue-500'>Rp 1.500.000</h4>
                 </div>
             </div>
             {/* Package Detail */}
             <div className='gradient-2 py-10 flex justify-center items-center space-x-10'>
-                <article className='bg-white p-10 rounded w-3/4 drop-shadow-sm'>
+                <article className='w-full md:w-3/4 bg-white p-10 rounded drop-shadow-sm'>
                     <section>
                         <h5 className='text-xl font-bold'>Engagement Model</h5>
                         <p className='mt-3'>Website landing page adalah website yang hanya terdiri dari sedikit halaman (biasanya kurang dari 5), semua informasi biasanya tertera di halaman utama. Tujuannya sebagai perkenalan atau promosi satu produk tertentu.</p>

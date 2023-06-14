@@ -48,10 +48,10 @@ const Portofolio = () => {
                 </div>
 
                 <div className="flex flex-col items-center justify-center md:max-w-[40%] text-center py-10">
-                    <p className=''>
-                    “ Software house services are needed to help your business connected with your target audience”
+                    <p className='text-base'>
+                    “ Software house services are needed to help your business connected with your target audience ”
                     </p>
-                    <p>Albar Moerhamsa</p>
+                    <p className='text-base'>Albar Moerhamsa</p>
                 </div>
             </div>
         </div>
