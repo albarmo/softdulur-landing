@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
+import Device from './device';
 
 const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
 
@@ -13,9 +14,8 @@ const itemVariants = {
 
 const HeroDashboard = () => {
     return (
-        <div className="flex h-screen justify-between">
-            <div className="relative w-full lg:w-4/6 md:w-full z-10  px-10 lg:px-20 flex flex-col items-left justify-center h-full leading-2">
-
+        <div className="flex h-screen justify-between flex-col-reverse md:flex-row">
+            <div className="relative w-auto lg:w-4/6 md:w-full z-10 px-10 pt-0 lg:px-20 flex flex-col items-left justify-center h-full leading-2">
                 <motion.article
                     initial="hidden"
                     animate="visible"
@@ -49,12 +49,13 @@ const HeroDashboard = () => {
                     </ul>
                 </motion.article>
             </div>
-            <div className="bg-transparent w-full hidden lg:block">
-                <img
+            <div className="bg-transparent w-full h-3/6 md:h-full">
+                <Device />
+                {/* <img
                     src="/team-work.svg"
                     alt="background image"
                     className='h-full'
-                />
+                /> */}
             </div>
         </div >
     )
