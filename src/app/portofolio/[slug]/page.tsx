@@ -3,15 +3,15 @@ import React from 'react'
 
 const PortofolioDetail = () => {
     return (
-        <React.Fragment>
+        <div className='overflow-hidden'>
             {/* Header */}
             <div className="flex h-auto justify-between gradient-background bg-blue-600">
-                <div className="w-2/4 z-10 px-40 py-20 pt-40">
-                    <h1 className='text-4xl font-[600] text-black leading-1'>Travelobar - Jalan Jalan Tapi Digaji .</h1>
+                <div className="w-full md:w-2/4 z-10 p-10 md:px-40 py-20 pt-40">
+                    <h1 className='text-2xl md:text-4xl font-[600] text-black leading-1'>Travelobar - Jalan Jalan Tapi Digaji .</h1>
                 </div>
             </div>
             {/* Project Summary */}
-            <div className='bg-white px-40 py-20 flex justify-between space-x-10'>
+            <div className='bg-white px-10 md:px-20 lg:px-40 py-10 flex flex-col md:flex-row justify-between space-x-10 space-y-10'>
                 <article aria-label='Left' className=''>
                     <div className='grid grid-cols-3 gap-10'>
                         <section className='col-span-3'>
@@ -60,7 +60,7 @@ const PortofolioDetail = () => {
             </div >
 
             {/* Project Detail */}
-            <div className='min-h-screen gradient-2 px-40 py-10 flex justify-between space-x-10'>
+            <div className='min-h-screen gradient-2 p-10 md:px-40 py-10 flex justify-between space-x-10'>
                 <article aria-label='Left' className=''>
                     <div className='grid grid-cols-1 gap-10'>
                         <section className='col-span-3'>
@@ -69,7 +69,7 @@ const PortofolioDetail = () => {
                         </section>
                         <section className='col-span-3'>
                             <h5 className='text-xl font-bold'>Tehnical  Responsibility </h5>
-                            <div className='grid grid-cols-5 gap-4 mt-10'>
+                            <div className='grid grid-cols-3 md:grid-cols-5 gap-4 mt-10'>
                                 {Array.from(Array(7).keys()).map((item, index) =>
                                     <span key={index} className="bg-gray-100 text-gray-800 text-sm font-medium mr-2 px-3.5 py-1.5 rounded">Responsibility {item}</span>
 
@@ -93,14 +93,12 @@ const PortofolioDetail = () => {
                         </section>
                         <section className='col-span-3'>
                             <h5 className='text-xl font-bold'>Project Gallery</h5>
-                            <div className='grid grid-cols-4 gap-10 mt-10'>
+                            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-10'>
                                 {Array.from(Array(7).keys()).map((item, index) =>
-                                    <Image
+                                    <img
                                         key={index}
-                                        src={`../mobile.svg`}
+                                        src={`https://ik.imagekit.io/tvlk/image/imageResource/2022/03/09/1646816611047-3d6b20b5ef0c1e2ef5df119a7d492938.png?tr=q-75`}
                                         alt={`Project Screenshoot ${item + 1}`}
-                                        width={120}
-                                        height={450}
                                     />
                                 )}
                             </div>
@@ -108,7 +106,7 @@ const PortofolioDetail = () => {
                     </div>
                 </article>
             </div >
-        </React.Fragment >
+        </div >
     )
 }
 

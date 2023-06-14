@@ -1,10 +1,25 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import { Bars2Icon } from '@heroicons/react/24/solid'
+import { motion } from 'framer-motion';
+
+
+const show = {
+  opacity: 1,
+  display: "block"
+};
+
+const hide = {
+  opacity: 0,
+  transitionEnd: {
+    display: "none"
+  }
+};
 
 const NavigationBar = () => {
+  const ref = useRef();
   const router = useRouter()
   const [drawer, setDrawer] = useState<boolean>(false)
   const [background, setBackground] = useState<"bg-transparent" | "bg-white">("bg-transparent")
@@ -25,8 +40,28 @@ const NavigationBar = () => {
     }
   })
 
+  function useOutsideAlerter(ref: any) {
+    useEffect(() => {
+      function handleClickOutside(event: any) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setDrawer(false)
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
+
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef);
+
+
   return (
-    <React.Fragment>
+    <div ref={wrapperRef}>
       <nav className={`fixed w-full ${background} h-20 p-5 lg:px-20 flex justify-between items-center z-50 overflow-hidden`}>
         <Image
           src="/logo.svg"
@@ -51,20 +86,28 @@ const NavigationBar = () => {
           </select>
           <button onClick={() => router.push('/')} className='border border-black px-5 py-2 rounded-full text-sm font-bold hidden md:flex'>Hire Us</button>
           <section aria-label='Burger Bar Mobile' className='lg:hidden'>
-            <Bars2Icon className='w-8 cursor-pointer p-1 hover:bg-blue-400 hover:text-white rounded' onClick={() => setDrawer(!drawer)} />
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setDrawer(!drawer)}
+            >
+              <Bars2Icon className='w-8 cursor-pointer p-1 hover:bg-blue-400 hover:text-white rounded' onClick={() => setDrawer(!drawer)} />
+            </motion.button>
           </section>
         </section>
       </nav >
-      {drawer && <div aria-label='Drawer Mobile' className='fixed w-full z-40 lg:hidden bg-gray-50 h-auto py-20 px-5 drop-shadow-lg shadow-white'>
-        <ul className='text-2xl font-base flex flex-col space-y-4 mt-10'>
-          <li className='cursor-pointer hover:font-semibold'>Portofolio</li>
-          <li className='cursor-pointer hover:font-semibold'>Layanan</li>
-          <li className='cursor-pointer hover:font-semibold'>Hubungi Kami</li>
-          <li className='cursor-pointer hover:font-semibold'>Blog</li>
-          <li className='cursor-pointer hover:font-semibold'>Karir</li>
-        </ul>
-      </div>}
-    </React.Fragment>
+
+      <motion.div className={`${drawer ? "flex" : "hidden"}`} animate={drawer ? show : hide} >
+        <div aria-label='Drawer Mobile' className={`fixed w-full z-40 lg:hidden bg-gray-50 h-auto py-20 px-5 drop-shadow-lg shadow-white`}>
+          <ul className='text-2xl font-base flex flex-col space-y-4 mt-10'>
+            <li className='cursor-pointer hover:font-semibold'>Portofolio</li>
+            <li className='cursor-pointer hover:font-semibold'>Layanan</li>
+            <li className='cursor-pointer hover:font-semibold'>Hubungi Kami</li>
+            <li className='cursor-pointer hover:font-semibold'>Blog</li>
+            <li className='cursor-pointer hover:font-semibold'>Karir</li>
+          </ul>
+        </div>
+      </motion.div>
+    </div>
   )
 }
 
