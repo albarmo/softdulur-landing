@@ -31,3 +31,15 @@ body {
 .gradient-2{
   background: radial-gradient(16.97% 22.41% at 10.71% 42.09%, rgba(131, 185, 230, 0.14) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(46.33% 72.7% at 91.1% 78.79%, rgba(101, 51, 156, 0.076) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
 }
+
+.gradient-3{
+  background: radial-gradient(64.76% 99.23% at 58.4% 70.53%, rgba(0, 139, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(93.25% 222.44% at 6.75% 92.34%, rgba(145, 95, 201, 0.27) 0%, rgba(255, 255, 255, 0.0351) 50.04%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(141.01deg, rgba(131, 185, 230, 0.6) 3.25%, rgba(131, 185, 230, 0) 63.51%), radial-gradient(41.37% 70.53% at 98.05% 10.83%, rgba(248, 30, 127, 0.39) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(250.69% 594.3% at 115.61% 162.26%, #83B9E6 0%, #F8FCFF 39.09%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.gradient-4{
+  background: linear-gradient(252.84deg, rgba(0, 139, 255, 0.8) 1%, rgba(248, 30, 127, 0.336) 91.49%, rgba(101, 51, 156, 0.8) 117.59%);
+}
+
+.gradient-5{
+  background: radial-gradient(24.54% 58.17% at 98.71% 4.99%, rgba(131, 185, 230, 0.32) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(68.97% 35.83% at -3.34% 89.58%, rgba(101, 51, 156, 0.3) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(248.94% 590.17% at 113.86% 152.14%, #83B9E6 0%, #F8FCFF 39.09%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
