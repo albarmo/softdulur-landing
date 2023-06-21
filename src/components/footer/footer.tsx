@@ -20,9 +20,11 @@ const Footer = () => {
                         />
                     </a>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                        {footerNavigation.map((item, index) => <li>
-                            <button key={index} className="mr-4 hover:underline md:mr-6" onClick={() => router.push(item.path)}>{item.title}</button>
-                        </li>)}
+                        {footerNavigation.map((item, index) =>
+                            <li key={index}>
+                                <button className="mr-4 hover:underline md:mr-6" onClick={() => router.push(item.path)}>{item.title}</button>
+                            </li>
+                        )}
 
                     </ul>
                 </div>
