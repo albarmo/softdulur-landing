@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import { Bars2Icon } from '@heroicons/react/24/solid'
 import { motion } from 'framer-motion';
+import { DesktopNavigation } from '@/utils/data/navigation';
 
 
 const show = {
@@ -73,11 +74,11 @@ const NavigationBar = () => {
           className='cursor-pointer'
         />
         <ul className='space-x-10 hidden lg:flex '>
-          <li className='cursor-pointer'>Portofolio</li>
-          <li className='cursor-pointer'>Layanan</li>
-          <li className='cursor-pointer'>Hubungi Kami</li>
-          <li className='cursor-pointer'>Blog</li>
-          <li className='cursor-pointer'>Karir</li>
+          {DesktopNavigation.map((nav) =>
+            <li className='cursor-pointer' onClick={() => router.push(nav.path)}>
+              {nav.title}
+            </li>
+          )}
         </ul>
         <section className='flex space-x-5'>
           <select className='bg-transparent hidden md:flex'>
@@ -99,11 +100,10 @@ const NavigationBar = () => {
       <motion.div className={`${drawer ? "flex" : "hidden"}`} animate={drawer ? show : hide} >
         <div aria-label='Drawer Mobile' className={`fixed w-full z-40 lg:hidden bg-gray-50 h-auto py-20 px-5 drop-shadow-lg shadow-white`}>
           <ul className='text-2xl font-base flex flex-col space-y-4 mt-10'>
-            <li className='cursor-pointer hover:font-semibold'>Portofolio</li>
-            <li className='cursor-pointer hover:font-semibold'>Layanan</li>
-            <li className='cursor-pointer hover:font-semibold'>Hubungi Kami</li>
-            <li className='cursor-pointer hover:font-semibold'>Blog</li>
-            <li className='cursor-pointer hover:font-semibold'>Karir</li>
+            {
+              DesktopNavigation.map((nav) =>
+                <li className='cursor-pointer' onClick={() => router.push(nav.path)}>{nav.title}</li>
+              )}
           </ul>
         </div>
       </motion.div>
