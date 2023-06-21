@@ -74,8 +74,8 @@ const NavigationBar = () => {
           className='cursor-pointer'
         />
         <ul className='space-x-10 hidden lg:flex '>
-          {DesktopNavigation.map((nav) =>
-            <li className='cursor-pointer' onClick={() => router.push(nav.path)}>
+          {DesktopNavigation.map((nav, index) =>
+            <li key={index} className='cursor-pointer' onClick={() => router.push(nav.path)}>
               {nav.title}
             </li>
           )}
@@ -101,8 +101,8 @@ const NavigationBar = () => {
         <div aria-label='Drawer Mobile' className={`fixed w-full z-40 lg:hidden bg-gray-50 h-auto py-20 px-5 drop-shadow-lg shadow-white`}>
           <ul className='text-2xl font-base flex flex-col space-y-4 mt-10'>
             {
-              DesktopNavigation.map((nav) =>
-                <li className='cursor-pointer' onClick={() => router.push(nav.path)}>{nav.title}</li>
+              DesktopNavigation.map((nav, index) =>
+                <li key={index} className='cursor-pointer' onClick={() => router.push(nav.path)}>{nav.title}</li>
               )}
           </ul>
         </div>
