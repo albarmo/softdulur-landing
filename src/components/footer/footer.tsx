@@ -19,7 +19,7 @@ const Footer = () => {
                             priority
                         />
                     </a>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
                         {footerNavigation.map((item, index) =>
                             <li key={index}>
                                 <button className="mr-4 hover:underline md:mr-6" onClick={() => router.push(item.path)}>{item.title}</button>
@@ -29,9 +29,9 @@ const Footer = () => {
                     </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-                <p className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">Jalan H Mandor 12 A CIlandak Barat Jakarta Selatan
+                <p className="block text-sm text-gray-500 sm:text-center">Jalan H Mandor 12 A CIlandak Barat Jakarta Selatan
                     12430 Indoneisa +62 9128083127312</p>
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://softdulur.com/" className="hover:underline">Softdulur</a>. All Rights Reserved.</span>
+                <span className="block text-sm text-gray-500 sm:text-center">© 2023 <a href="https://softdulur.com/" className="hover:underline">Softdulur</a>. All Rights Reserved.</span>
             </div>
         </footer>
 
