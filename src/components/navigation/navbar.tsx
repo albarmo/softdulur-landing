@@ -22,8 +22,8 @@ const hide = {
 const NavigationBar = () => {
   const ref = useRef();
   const router = useRouter()
-  const [drawer, setDrawer] = useState<boolean>(false)
-  const [background, setBackground] = useState<"bg-transparent" | "bg-white">("bg-transparent")
+  const [ drawer, setDrawer ] = useState<boolean>(false)
+  const [ background, setBackground ] = useState<"bg-transparent" | "bg-white">("bg-transparent")
   const changeBackground = () => {
     if (typeof window !== "undefined") {
       // Client-side-only code
@@ -54,7 +54,7 @@ const NavigationBar = () => {
         // Unbind the event listener on clean up
         document.removeEventListener("mousedown", handleClickOutside);
       };
-    }, [ref]);
+    }, [ ref ]);
   }
 
   const wrapperRef = useRef(null);
@@ -63,7 +63,7 @@ const NavigationBar = () => {
 
   return (
     <div ref={wrapperRef}>
-      <nav className={`fixed w-full ${background} h-20 p-5 lg:px-20 flex justify-between items-center z-50 overflow-hidden`}>
+      <nav className={`fixed w-full ${ background } h-20 p-5 lg:px-20 flex justify-between items-center z-50 overflow-hidden`}>
         <Image
           src="/logo.svg"
           alt="Vercel Logo"
@@ -97,7 +97,7 @@ const NavigationBar = () => {
         </section>
       </nav >
 
-      <motion.div className={`${drawer ? "flex" : "hidden"}`} animate={drawer ? show : hide} >
+      <motion.div className={`${ drawer ? "flex" : "hidden" }`} animate={drawer ? show : hide} >
         <div aria-label='Drawer Mobile' className={`fixed w-full z-40 lg:hidden bg-gray-50 h-auto py-20 px-5 drop-shadow-lg shadow-white`}>
           <ul className='text-2xl font-base flex flex-col space-y-4 mt-10'>
             {
